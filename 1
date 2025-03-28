@@ -1,0 +1,10 @@
+@echo off
+
+
+echo.
+echo Neustart-Grund:
+wevtutil qe System /q:"*[System[(EventID=1074)]]" /c:1 /f:text | findstr /C:"Beschreibung"
+
+echo.
+echo Druecken Sie eine beliebige Taste zum Schliessen...
+pause >nul 
